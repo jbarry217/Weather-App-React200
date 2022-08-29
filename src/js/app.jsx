@@ -8,9 +8,9 @@ export default class App extends React.Component {
     return (
       <div className='container'>
         <div className='row'>
-          <div className='col'>
-            <h1 className='text center my-3'>Weather App</h1>
-              <p className='text center mb-3'>Check the weather around the world!</p>
+          <div className='col-sm-12'>  
+            <h1 className='display-3 text-center fw-bold my-3'>Weather App</h1>
+              <h5 className='text-center fst-italic mb-5'>Check the weather around the world!</h5>
           </div>
         </div>
 

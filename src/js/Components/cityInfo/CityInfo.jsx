@@ -6,7 +6,7 @@ export default class CityInfo extends React.Component {
             <div className='card border-info'>
                 <div className='card-header text-white bg-info'>City Information</div>
                 <div className='card-body'>
-                    <h1 className='text-center'>City</h1>
+                    <h2 className='text-center'>City</h2>
                     <p className='text-center'>Lat/Long: </p>
 
                     <div className='row'>
