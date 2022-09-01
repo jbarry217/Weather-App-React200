@@ -1,12 +1,27 @@
+import { fromPairs } from 'lodash';
 import React from 'react';
+import {
+    updateSearch, 
+    getWeather
+} from './searchActions'
 
 export default class SearchBar extends React.Component {
     constructor(props){
         super(props); 
+
+        this.handleSearchInput.bind(this);
     }
+
+    handleSearchInput(event) {
+        const { dispatch } = this.props;
+        const { value } = event.target;
+        
+        dispatch(updateSearch(value));
+    };
 
 
     render(){
+
         return(
             <form>
                 <div className='row'>
@@ -20,8 +35,8 @@ export default class SearchBar extends React.Component {
                 </div>
                 <div className='row mb-5'>
                     <div className='col input-group'>
-                        <input type="text" className='form-control'/>
-                        <button type="button" className='btn btn-outline'>Go!</button>
+                        <input type="text" className='form-control' />
+                        <button type="button" className='btn btn-outline' onClick= { this.handleSearchInput }>Go!</button>
                     </div>
                 </div>
             </form>
